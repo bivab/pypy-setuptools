@@ -1,0 +1,4 @@
+pypy-setuptools
+===============
+
+Basic Debian binary packaging of setuptools for PyPy.
