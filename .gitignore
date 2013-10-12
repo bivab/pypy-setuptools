@@ -1,0 +1,5 @@
+*.swp
+debian/debhelper.log
+debian/files
+*setuptools*
+debian/tmp
