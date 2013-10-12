@@ -1,0 +1,17 @@
+Source: pypy-setuptools
+Maintainer: David Schneider <david.schneider@bivab.de>
+Section: python
+Priority: optional
+Build-Depends: 
+               pypy-upstream (>= 2.1),
+               pypy-upstream-dev (>= 2.1),
+               debhelper (>= 7),
+               wget
+Standards-Version: 3.8.4
+Homepage: https://pypi.python.org/pypi/setuptools
+
+Package: pypy-setuptools
+Architecture: any
+Pre-Depends: pypy-upstream (>= 2.1), pypy-upstream-dev (>= 2.1)
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Easily download, build, install, upgrade, and uninstall Python packages 

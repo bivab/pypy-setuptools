@@ -1,0 +1,5 @@
+pypy-setuptools (1.1.6-1) unstable; urgency=low
+
+  * Initial release.
+
+ -- David Schneider <david.schneider@bivab.de>  Sat, 12 Oct 2013 17:18:48 +0200

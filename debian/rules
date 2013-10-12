@@ -1,0 +1,21 @@
+#!/usr/bin/make -f
+export DH_ALWAYS_EXCLUDE=.git:*.swp:*.swo
+VERSION=1.1.6
+SETUPTOOLS=https://pypi.python.org/packages/source/s/setuptools/setuptools-$(VERSION).tar.gz
+
+%:
+	dh $@ --without python-support
+
+override_dh_auto_clean:
+	rm -rf setuptools*
+
+override_dh_auto_install: setuptools.tar.gz
+	pypy setuptools/setup.py install --root=$(CURDIR)/debian/tmp
+
+override_dh_builddeb:
+	dh_builddeb -- -Zxz
+
+setuptools.tar.gz:
+	wget $(SETUPTOOLS) -O setuptools.tar.gz
+	tar -xf setuptools.tar.gz
+	mv setuptools-$(VERSION) setuptools
